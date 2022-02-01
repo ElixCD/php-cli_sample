@@ -1,8 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
+	start := time.Now()
 	fmt.Println("Prueba de punto flotante en Go.")
 
 	n := 30
@@ -17,7 +21,7 @@ func main() {
 	}
 
 	fmt.Println("La maxima presisión de punto flotante con Go es con 64 bits ")
-
+	fmt.Println(time.Since((start)))
 }
 
 func rec(y float32, z float32) float32 {

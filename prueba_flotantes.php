@@ -27,7 +27,6 @@ function fixedpt(int $N): array
     return $x;
 }
 
-
 $n = 30;
 $norm = floatpt(30);
 $fix = fixedpt(30);
@@ -44,3 +43,6 @@ for ($i = 0; $i <= $n; $i++) {
 echo "\n";
 echo "En procesador de 64 bits, php obedece el estándar IEEE 754 para el manejo de punto flotante\n";
 echo "\n";
+
+$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+echo "Tiempo empleado: " . $time*1000;

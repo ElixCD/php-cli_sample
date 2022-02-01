@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace test
@@ -8,6 +9,8 @@ namespace test
     {
         static void Main(string[] args)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             // Console.WriteLine("Hello World!");
 
             int N = 50;
@@ -18,6 +21,9 @@ namespace test
             {
                 Console.WriteLine("[{0}]: {1} | {2} ", i, lst[i], lst2[i]);
             }
+
+            stopwatch.Stop();
+            Console.WriteLine("Tiempo transcurrido: {0}", stopwatch.ElapsedMilliseconds);
 
         }
 
